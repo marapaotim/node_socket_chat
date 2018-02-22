@@ -19,7 +19,8 @@ io.on('connection', function(socket){
   });
 
   socket.on('typing', function(msg){
-   	io.emit('typing', msg);
+   	//io.emit('typing', msg);
+    socket.broadcast.emit('typing', msg);
   });
 
 });

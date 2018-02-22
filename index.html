@@ -39,12 +39,12 @@
         var timeout = null;
 
         $('form input').keyup(function() { 
-          socket.emit('typing', 'User is typing');  
+          socket.emit('typing', 'User is typing. . .');  
         });
 
         socket.on('typing', function(msg){
 
-          $('div.user-typing').text(msg);
+          $('div.user-typing i').text(msg);
           $('div.user-typing').show();
             clearTimeout(timeout);
 
